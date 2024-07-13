@@ -23,8 +23,8 @@ RUN apt-get update && \
     rm -rf /var/cache/* /var/log/apt/* /tmp/*
 
 # Install Latest Google Chrome and Chrome Remote Desktop
-RUN wget --no-check-certificate -O /tmp/google-chrome-stable.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    wget --no-check-certificate -O /tmp/chrome-remote-desktop.deb https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb && \
+RUN wget --no-check-certificate -O /tmp/google-chrome-stable.deb https://dl.google.com/linux/direct/google-chrome-stable_current_arm64.deb && \
+    wget --no-check-certificate -O /tmp/chrome-remote-desktop.deb https://dl.google.com/linux/direct/chrome-remote-desktop_current_arm64.deb && \
     apt-get update && \
     apt-get install -y --no-install-recommends /tmp/google-chrome-stable.deb /tmp/chrome-remote-desktop.deb && \
     rm /tmp/google-chrome-stable.deb /tmp/chrome-remote-desktop.deb
